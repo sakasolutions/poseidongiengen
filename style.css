@@ -698,3 +698,28 @@ ul {
       display: none;
   }
 }
+
+/* ============================ */
+    /* SPEISEKARTE (MOBILE SWIPE)   */
+    /* ============================ */
+    .menu-grid {
+      flex-wrap: nowrap;          /* Verhindert, dass die Karten untereinander umbrechen */
+      overflow-x: auto;         /* Ermöglicht horizontales Scrollen (und Swipen auf Touch-Geräten) */
+      justify-content: flex-start;/* Richtet die erste Karte links aus */
+      padding-left: 20px;         /* Start-Abstand, damit die Karte nicht am Rand klebt */
+      padding-right: 20px;        /* End-Abstand */
+      padding-bottom: 20px;       /* Platz für den Schatten der Karten */
+
+      /* Spezieller Trick, um die Scroll-Leiste unsichtbar zu machen */
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
+  
+  /* Versteckt die Scroll-Leiste in Webkit-Browsern (Chrome, Safari) */
+  .menu-grid::-webkit-scrollbar {
+      display: none;
+  }
+
+  .menu-card {
+      flex: 0 0 280px; /* Jede Karte ist 280px breit und schrumpft/wächst nicht */
+  }
