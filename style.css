@@ -590,3 +590,111 @@ ul {
 .footer-copyright {
   font-size: 0.9rem;
 }
+
+/* ================================================================== */
+/* ================================================================== */
+/* RESPONSIVE DESIGN FÜR MOBILGERÄTE                   */
+/* ================================================================== */
+/* ================================================================== */
+
+@media (max-width: 768px) {
+
+  /* ============================ */
+  /* HEADER & MOBILE NAVIGATION   */
+  /* ============================ */
+  
+  /* Hamburger-Menü-Button sichtbar machen */
+  .hamburger-menu {
+      display: block;
+      background: none;
+      border: none;
+      color: var(--dark-text-color);
+      font-size: 1.8rem;
+      cursor: pointer;
+      z-index: 1001; /* Über dem Menü-Panel */
+  }
+  
+  /* Desktop-Navigation ausblenden */
+  .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%; /* Startet außerhalb des Bildschirms */
+      width: 70%;
+      height: 100vh;
+      background-color: #ffffff;
+      box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      transition: right 0.4s ease-in-out;
+  }
+  
+  /* Wenn das Menü aktiv ist, wird es in den Bildschirm geschoben */
+  .nav-links.active {
+      right: 0;
+  }
+
+  .nav-links a {
+      font-size: 1.2rem;
+  }
+
+
+  /* ============================ */
+  /* ALLGEMEINE ANPASSUNGEN       */
+  /* ============================ */
+  .section-title,
+  .about-text h2 {
+      font-size: 2rem; /* Sektions-Titel verkleinern */
+  }
+
+  #ueber-uns,
+  #speisekarte,
+  #kontakt {
+      padding: 60px 0; /* Weniger Abstand auf mobilen Geräten */
+  }
+
+  /* ============================ */
+  /* HERO SEKTION                 */
+  /* ============================ */
+  .hero-title {
+      font-size: 2.5rem; /* Haupt-Titel deutlich verkleinern */
+  }
+
+  .hero-subtitle {
+      font-size: 1rem;
+  }
+  
+  .hero-buttons {
+      flex-direction: column; /* Buttons untereinander anordnen */
+      align-items: center;
+      gap: 1rem;
+  }
+
+
+  /* ============================ */
+  /* ÜBER UNS & KONTAKT SEKTION   */
+  /* ============================ */
+  .about-wrapper,
+  .contact-wrapper {
+      flex-direction: column; /* Spalten untereinander anordnen */
+      gap: 40px;
+  }
+
+
+  /* ============================ */
+  /* FOOTER                       */
+  /* ============================ */
+  .footer-links {
+      display: flex;
+      flex-direction: column; /* Links untereinander */
+      gap: 15px;
+  }
+}
+
+/* Versteckt den Hamburger auf dem Desktop */
+@media (min-width: 769px) {
+  .hamburger-menu {
+      display: none;
+  }
+}

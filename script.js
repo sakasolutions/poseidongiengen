@@ -23,6 +23,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+// ===================================================================
+// FUNKTION: MOBILES HAMBURGER-MENÜ
+// ===================================================================
+const hamburgerButton = document.getElementById('hamburger-menu');
+const navLinks = document.getElementById('nav-links');
+
+hamburgerButton.addEventListener('click', () => {
+    navLinks.classList.toggle('active'); // Schaltet die Klasse 'active' um
+});
+
+// Optional: Menü schließen, wenn auf einen Link geklickt wird
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
 
     // ===================================================================
