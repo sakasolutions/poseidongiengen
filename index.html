@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imbiss Poseidon</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+</head>
+<body>
+
+    <header id="header">
+        <nav class="container">
+            <a href="#" class="logo">IMBISS POSEIDON</a>
+            <ul class="nav-links">
+                <li><a href="#ueber-uns">Über uns</a></li>
+                <li><a href="#speisekarte">Speisekarte</a></li>
+                <li><a href="#kontakt" class="btn-nav">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content container">
+                <h1 class="hero-title">Ein Stück Griechenland</h1>
+                <p class="hero-subtitle">Genießen Sie den besten Gyros der Stadt, täglich frisch zubereitet im Imbiss Poseidon</p>
+                <div class="hero-buttons">
+                    <a href="#speisekarte" class="btn btn-outline">Speisekarte</a>
+                    <a href="#reservierung" class="btn btn-primary">Reservierung</a>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="ueber-uns">
+          <div class="container">
+              <div class="about-wrapper">
+      
+                  <div class="about-image animate-on-scroll">
+                      <img src="assets/img/family.jpg" alt="Familie Poseidon im Restaurant">
+                  </div>
+      
+                  <div class="about-text animate-on-scroll">
+                      <h2>Eine Familie, eine Leidenschaft</h2>
+                      <p class="tagline">Griechische Gastfreundschaft im Herzen der Stadt</p>
+                      <p>Seit über 15 Jahren bringen wir die authentischen Aromen unserer Heimat direkt zu Ihnen. Imbiss Poseidon ist mehr als nur ein Geschäft – es ist unser Familienerbe. Jedes Gyros, das wir zubereiten, und jeder Salat, den wir anrichten, steckt voller Liebe und traditioneller Rezepte, die von Generation zu Generation weitergegeben wurden.</p>
+                      <p>Wir glauben an frische Zutaten, ehrliches Handwerk und daran, jeden Gast wie ein Familienmitglied zu begrüßen. Treten Sie ein und werden Sie Teil unserer Geschichte.</p>
+                      <a href="#speisekarte" class="btn btn-primary-dark">Unsere Spezialitäten</a>
+                  </div>
+      
+              </div>
+          </div>
+      </section>
+
+      <section id="speisekarte">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Ein Blick auf unsere Karte</h2>
+            
+            <div class="menu-grid">
+
+              <div class="menu-card animate-on-scroll">
+                  <img src="assets/img/vorspeise.jpg" alt="Vorspeisen Auswahl" class="menu-image">
+                  <div class="menu-card-content">
+                      <h3>Vorspeisen</h3>
+                      <p>Beginnen Sie Ihre kulinarische Reise mit unseren frischen und hausgemachten Vorspeisen. Von klassischem Zaziki bis zu gefüllten Weinblättern – hier schmecken Sie den authentischen Auftakt Griechenlands.</p>
+                  </div>
+              </div>
+          
+              <div class="menu-card animate-on-scroll" style="animation-delay: 0.2s;">
+                  <img src="assets/img/hauptgericht.jpg" alt="Hauptgerichte Auswahl" class="menu-image">
+                  <div class="menu-card-content">
+                      <h3>Hauptgerichte</h3>
+                      <p>Das Herz unserer Küche schlägt hier am lautesten. Freuen Sie sich auf saftiges Gyros direkt vom Spieß, zarte Souvlaki und weitere Klassiker, die wir mit Leidenschaft für Sie frisch zubereiten.</p>
+                  </div>
+              </div>
+          
+              <div class="menu-card animate-on-scroll" style="animation-delay: 0.4s;">
+                  <img src="assets/img/nachspeise.jpg" alt="Desserts Auswahl" class="menu-image">
+                  <div class="menu-card-content">
+                      <h3>Desserts</h3>
+                      <p>Jede gute Mahlzeit verdient einen süßen Abschluss. Lassen Sie sich von unseren hausgemachten Desserts verführen und krönen Sie Ihr Essen mit einer unwiderstehlichen griechischen Versuchung.</p>
+                  </div>
+              </div>
+          
+          </div>
+    
+            </div>
+        </div>
+    </section>
+    
+    <div id="lightbox-modal" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-image">
+    </div>
+
+
+    <section id="kontakt">
+      <div class="container">
+          <h2 class="section-title animate-on-scroll">Besuchen Sie uns</h2>
+          <div class="contact-wrapper">
+  
+              <div class="contact-info animate-on-scroll">
+                  <h3>Imbiss Poseidon</h3>
+                  <p>Riedstraße 9<br>89537 Giengen an der Brenz</p>
+                  
+                  <h4>Öffnungszeiten:</h4>
+                  <p>
+                      <strong>Mo - Sa:</strong> 11:00 - 20:00 Uhr<br>
+                      <strong>So:</strong> geschlossen.
+                  </p>
+  
+                  <h4>Direkt anrufen:</h4>
+                  <p class="phone-link"><a href="tel:+49123456789">0123 / 456 789</a></p>
+  
+                  <div class="social-buttons">
+    <a href="https://wa.me/49123456789" target="_blank" class="btn-social whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+    <a href="https://instagram.com/deinprofil" target="_blank" class="btn-social instagram">
+        <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="https://facebook.com/deinprofil" target="_blank" class="btn-social facebook">
+        <i class="fab fa-facebook-f"></i> Facebook
+    </a>
+</div>
+              </div>
+  
+              <div class="contact-map animate-on-scroll" style="animation-delay: 0.2s;">
+                <iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2637.406857760753!2d10.248435276190685!3d48.62119597130094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47993f004ca6314b%3A0xd648cd412e3aa457!2sImbiss%20Poseidon!5e0!3m2!1sde!2sde!4v1754144640824!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+  
+          </div>
+      </div>
+  </section>
+
+
+
+  <footer id="footer">
+    <div class="container">
+        <div class="footer-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+            <a href="agb.html">AGB</a>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2025 Imbiss Poseidon. Alle Rechte vorbehalten.
+        </div>
+    </div>
+</footer>
+
+        </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
