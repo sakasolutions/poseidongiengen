@@ -597,13 +597,18 @@ ul {
 /* ================================================================== */
 /* ================================================================== */
 
+/* ================================================================== */
+/* ================================================================== */
+/* RESPONSIVE DESIGN FÜR MOBILGERÄTE                   */
+/* ================================================================== */
+/* ================================================================== */
+
 @media (max-width: 768px) {
 
   /* ============================ */
   /* HEADER & MOBILE NAVIGATION   */
   /* ============================ */
   
-  /* Hamburger-Menü-Button sichtbar machen */
   .hamburger-menu {
       display: block;
       background: none;
@@ -611,14 +616,13 @@ ul {
       color: var(--dark-text-color);
       font-size: 1.8rem;
       cursor: pointer;
-      z-index: 1001; /* Über dem Menü-Panel */
+      z-index: 1001;
   }
   
-  /* Desktop-Navigation ausblenden */
   .nav-links {
       position: fixed;
       top: 0;
-      right: -100%; /* Startet außerhalb des Bildschirms */
+      right: -100%;
       width: 70%;
       height: 100vh;
       background-color: #ffffff;
@@ -630,7 +634,6 @@ ul {
       transition: right 0.4s ease-in-out;
   }
   
-  /* Wenn das Menü aktiv ist, wird es in den Bildschirm geschoben */
   .nav-links.active {
       right: 0;
   }
@@ -645,20 +648,20 @@ ul {
   /* ============================ */
   .section-title,
   .about-text h2 {
-      font-size: 2rem; /* Sektions-Titel verkleinern */
+      font-size: 2rem;
   }
 
   #ueber-uns,
   #speisekarte,
   #kontakt {
-      padding: 60px 0; /* Weniger Abstand auf mobilen Geräten */
+      padding: 60px 0;
   }
 
   /* ============================ */
   /* HERO SEKTION                 */
   /* ============================ */
   .hero-title {
-      font-size: 2.5rem; /* Haupt-Titel deutlich verkleinern */
+      font-size: 2.5rem;
   }
 
   .hero-subtitle {
@@ -666,7 +669,7 @@ ul {
   }
   
   .hero-buttons {
-      flex-direction: column; /* Buttons untereinander anordnen */
+      flex-direction: column;
       align-items: center;
       gap: 1rem;
   }
@@ -677,8 +680,36 @@ ul {
   /* ============================ */
   .about-wrapper,
   .contact-wrapper {
-      flex-direction: column; /* Spalten untereinander anordnen */
+      flex-direction: column;
       gap: 40px;
+  }
+
+  
+  /* ============================ */
+  /* SPEISEKARTE (MOBILE SWIPE)   */
+  /* ============================ */
+  .menu-grid {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      justify-content: flex-start;
+      padding: 0 20px 20px 20px;
+      margin: 0 -20px; /* Gleicht den Container-Padding aus für Full-Width-Effekt */
+      -webkit-overflow-scrolling: touch; 
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+  }
+  
+  .menu-grid::-webkit-scrollbar {
+      display: none;
+  }
+
+  .menu-card {
+      flex: 0 0 280px;
+      transform: none; /* Deaktiviert den Hover-Effekt auf Mobilgeräten */
+  }
+
+  .menu-card:hover {
+      transform: none;
   }
 
 
@@ -687,7 +718,7 @@ ul {
   /* ============================ */
   .footer-links {
       display: flex;
-      flex-direction: column; /* Links untereinander */
+      flex-direction: column;
       gap: 15px;
   }
 }
@@ -699,27 +730,3 @@ ul {
   }
 }
 
-/* ============================ */
-    /* SPEISEKARTE (MOBILE SWIPE)   */
-    /* ============================ */
-    .menu-grid {
-      flex-wrap: nowrap;          /* Verhindert, dass die Karten untereinander umbrechen */
-      overflow-x: auto;         /* Ermöglicht horizontales Scrollen (und Swipen auf Touch-Geräten) */
-      justify-content: flex-start;/* Richtet die erste Karte links aus */
-      padding-left: 20px;         /* Start-Abstand, damit die Karte nicht am Rand klebt */
-      padding-right: 20px;        /* End-Abstand */
-      padding-bottom: 20px;       /* Platz für den Schatten der Karten */
-
-      /* Spezieller Trick, um die Scroll-Leiste unsichtbar zu machen */
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
-  }
-  
-  /* Versteckt die Scroll-Leiste in Webkit-Browsern (Chrome, Safari) */
-  .menu-grid::-webkit-scrollbar {
-      display: none;
-  }
-
-  .menu-card {
-      flex: 0 0 280px; /* Jede Karte ist 280px breit und schrumpft/wächst nicht */
-  }
